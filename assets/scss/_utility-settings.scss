@@ -1,0 +1,44 @@
+/* Setting to `false` won't render the utility classes */
+$u-classes-background:           false;
+$u-classes-border-radius:        false;
+$u-classes-border:               false;
+$u-classes-box-sizing:           false;
+$u-classes-clear:                false;
+$u-classes-display:              false;
+$u-classes-flex-align-content:   false;
+$u-classes-flex-align-items:     false;
+$u-classes-flex-align-self:      false;
+$u-classes-flex-basis:           false;
+$u-classes-flex-direction:       false;
+$u-classes-flex-grow:            false;
+$u-classes-flex-justify-content: false;
+$u-classes-flex-shrink:          false;
+$u-classes-flex-wrap:            false;
+$u-classes-flexbox:              false;
+$u-classes-float:                false;
+$u-classes-font-family:          false;
+$u-classes-font-size:            false;
+$u-classes-font-weight:          false;
+$u-classes-height-width:         false;
+$u-classes-interaction:          false;
+$u-classes-letter-spacing:       false;
+$u-classes-line-height:          false;
+$u-classes-list-item-spacing:    false;
+$u-classes-list-style:           false;
+$u-classes-margin:               false;
+$u-classes-opacity:              false;
+$u-classes-overflow:             false;
+$u-classes-padding:              false;
+$u-classes-positioning:          false;
+$u-classes-text-color:           false;
+$u-classes-text-decoration:      false;
+$u-classes-text-formatting:      false;
+$u-classes-vertical-align:       false;
+$u-classes-z-index:              false;
+
+/* Leave quotes empty if this project doesn't have custom aliases */
+$project: "";
+
+/* Import utilities and other CSS dependencies */
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/fa-css-utilities/_utilities";

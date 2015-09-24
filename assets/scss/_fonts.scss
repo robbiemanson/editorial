@@ -1,0 +1,66 @@
+/**
+ * Fonts
+ *
+ * NOTE: This file is specific to the main app views only — editing it will not
+ * affect the login views, which require their own version of the file. Find the
+ * login views file at: /www/css/fonts.css
+ *
+ * Source Sans Pro is our primary mobile typeface, an open-source face designed
+ * specifically for UI work. We make it available via @font-face in the WOFF
+ * (Web Open Font Format) due to WOFFs better compression.
+ *
+ * WOFF has good browser support (http://caniuse.com/#feat=woff), but if we
+ * decide one day that we need to offer support for IE8, Android 4.1 or 4.3
+ * browsers, additional Source Sans formats can be downloaded from the official
+ * source repo: https://github.com/adobe-fonts/source-sans-pro. An example CSS
+ * file will be included in the download, providing the necessary @font-face
+ * code you'll need to include below.
+ */
+
+/**
+ * Regular
+ */
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  src: url("../fonts/source_sans/WOFF/OTF/SourceSansPro-Regular.otf.woff") format("woff");
+}
+
+/**
+ * Italic
+ */
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  src: font-url("source_sans/WOFF/OTF/SourceSansPro-It.otf.woff") format("woff");
+}
+
+/**
+ * Semibold
+ */
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  src: font-url("source_sans/WOFF/OTF/SourceSansPro-Semibold.otf.woff") format("woff");
+}
+
+/**
+ * Semibold Italic
+ */
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  font-style: italic;
+  font-stretch: normal;
+  src: font-url("source_sans/WOFF/OTF/SourceSansPro-SemiboldIt.otf.woff") format("woff");
+}
