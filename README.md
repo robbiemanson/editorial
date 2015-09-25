@@ -4,21 +4,21 @@ A barebones editorial starting point.
 ### Install
 Prerequisite: [Node.js][1]
 
-1. Clone repo to a new project folder on your machine
+1: Clone repo to a new project folder on your machine
 ```
 git clone --depth 1 --origin source git@github.com:robbiemanson/editorial.git new-project-folder
 ```
 
-2. Install NPM modules
+2: Install NPM modules
 ```
 npm install
 ```
 
-3. Drag project folder into Codekit, or use whatever other CLI you want to
+3: Drag project folder into Codekit, or use whatever other CLI you want to
 compile Sass assets. It's expected that you'll add your own solution for
 handling assets later, be that Asset Pipeline, Grunt, Gulp, etc.
 
-4. If using Codekit, visit [http://<yourmachinename>.local:5757/][2],
+4: If using Codekit, visit [http://yourmachinename.local:5757/][2],
 or whatever the URL of the locally running server is.
 
 There's also a barebones example article format: article.html
