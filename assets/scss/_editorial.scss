@@ -1,0 +1,202 @@
+/* `display` utilities
+   ========================================================================== */
+
+@media only screen and (min-width: $breakpoint--sm) {
+  .u-sm-display--inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media only screen and (min-width: $breakpoint--medium-breakpoint) {
+  .u-md-display--inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media only screen and (min-width: $breakpoint--small-breakpoint) {
+  .u-lg-display--block {
+    display: block !important;
+  }
+}
+
+
+/* `font-size` utilities
+   ========================================================================== */
+
+.u-bp-sm-font-size--default {
+  @media only screen and (min-width: $breakpoint--sm) {
+    @include fa-font-size(default, !important);
+  }
+}
+
+.u-md-font-size--default {
+  @media only screen and (min-width: $breakpoint--medium-breakpoint) {
+    @include fa-font-size(default, !important);
+  }
+}
+
+.u-md-font-size--small {
+  @media only screen and (min-width: $breakpoint--medium-breakpoint) {
+    @include fa-font-size(default, !important);
+    @include fa-line-height(7, !important);
+  }
+  @media only screen and (min-width: $breakpoint--Editorial-large-text) {
+    @include fa-font-size(large, !important);
+    @include fa-line-height(7, !important);
+  }
+}
+
+
+/* `margin` utilities
+   ========================================================================== */
+
+@media only screen and (min-width: $breakpoint--small-breakpoint) {
+  .u-md-margin-top--0 {
+    margin-top: 0 !important;
+  }
+}
+
+@media only screen and (min-width: $breakpoint--medium-breakpoint) {
+  .u-lg-margin-top--0 {
+    margin-top: 0 !important;
+  }
+}
+
+
+/* Base elements
+   ========================================================================== */
+
+abbr[title] {
+  border-bottom: 1px dotted rgba(83, 75, 63, 0.5);
+}
+
+.Break--screenSize-medium {
+  display: none;
+  @media only screen and (min-width: $breakpoint--small-breakpoint) {
+    display: block;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  @include ed-font-family(sans);
+  @include fa-font-size(default);
+  @include fa-font-weight(bold);
+  @include fa-line-height(default);
+  @include fa-text-color(default);
+}
+
+img {
+  max-width: 100%;
+}
+
+mark {
+  @include fa-background-color(fa-yellow);
+  @include fa-text-color(default);
+}
+
+code,
+kbd,
+pre,
+samp {
+  @include fa-font-family(monospace);
+  @include fa-font-size(default);
+  @include fa-line-height(default);
+}
+
+p {
+  margin-bottom: 1.25em;
+  margin-top: 0;
+}
+
+.u-margin-bottom--screen-size-medium {
+  @media only screen and (min-width: $breakpoint--small-breakpoint) {
+    @include fa-margin-bottom(default, !important);
+  }
+}
+
+
+/* Leader
+   ========================================================================== */
+
+.Leader {
+  @include Leader;
+}
+
+.Editorial-heading + .Leader {
+  margin-top: -5px;
+}
+
+.Leader--large {
+  @include Leader--large;
+}
+
+.Leader--extraLarge {
+  @include Leader--extraLarge;
+}
+
+.Leader-link {
+	background-image: -moz-linear-gradient(top, rgba(136, 136, 136,0) 50%, rgba(136, 136, 136,0.6) 50%);
+	background-image: -webkit-linear-gradient(top, rgba(136, 136, 136,0) 50%, rgba(136, 136, 136,0.6) 50%);
+	background-image: -o-linear-gradient(top, rgba(136, 136, 136,0) 50%, rgba(136, 136, 136,0.6) 50%);
+	background-image: linear-gradient(to bottom, rgba(136, 136, 136,0) 50%, rgba(136, 136, 136,0.6) 50%);
+	background-repeat: repeat-x;
+	background-size: 2px 2px;
+	background-position: 0 1.05em;
+	text-decoration: none;
+  @include fa-text-color(gray-5);
+
+  @media not all, only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2) {
+    background-image: -moz-linear-gradient(top, rgba(136, 136, 136,0) 75%, rgba(136, 136, 136,0.8) 75%);
+    background-image: -webkit-linear-gradient(top, rgba(136, 136, 136,0) 75%, rgba(136, 136, 136,0.8) 75%);
+    background-image: -o-linear-gradient(top, rgba(136, 136, 136,0) 75%, rgba(136, 136, 136,0.8) 75%);
+    background-image: linear-gradient(to bottom, rgba(136, 136, 136,0) 75%, rgba(136, 136, 136,0.8) 75%);
+    background-repeat: repeat-x;
+  }
+}
+
+
+/* Editorial content
+   ========================================================================== */
+
+.Editorial {
+  @media only screen and (min-width: $breakpoint--Editorial-large-text) {
+    max-width: 100%;
+    @include fa-font-size(x-large);
+    @include fa-line-height(8);
+  }
+}
+
+.Heading--Editorial {
+  margin-top: 0;
+}
+
+.Heading--Editorial + .Metadata {
+  margin-top: -0.5em;
+}
+
+
+/* Comma separation
+   ========================================================================== */
+
+.separate--comma:after {
+  content:", ";
+}
+.separate--comma:last-child:after {
+  content:"";
+}

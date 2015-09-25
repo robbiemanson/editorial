@@ -1,46 +1,60 @@
 @charset "UTF-8";
 
-/**
- * Define settings for FA CSS utilities and import them
- */
+/* Utilities
+   ==========================================================================
+   These CSS utilities are the ‘one true source’ of our design properties at
+   FreeAgent. They contain universal scales and aliases for dozens of CSS
+   properties, our library of colours for text and block-level elements, plus
+   mixins and `.u-` utility classes.
+
+   More info, guidance, and example usage:
+   https://github.com/fac/fa-css-utilities
+*/
 
 @import "_utility-settings";
 
-/**
- * Load our fonts for @font-face use
- */
+
+/* Fonts
+   ========================================================================== */
 
 @import "_fonts";
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
 
-html {
-  font-size: 100%;
-  height: 100%;
-}
+/* Vendor CSS dependencies
+   ========================================================================== */
 
-body {
-  height: 100%;
-  margin: 0;
-  min-height: 100%;
-  padding: 0;
-}
+@import "vendor/foundation/_settings";
+@import "vendor/foundation/components/_block-grid";
+@import "vendor/foundation/components/_grid";
 
-body,
-input,
-textarea,
-keygen,
-select,
-button {
-  letter-spacing: -0.013em; /* Remove if not using Source Sans Pro */
-  @include fa-font-family(default);
-  @include fa-font-size(default);
-  @include fa-line-height(default);
-  @include fa-text-color(default);
-}
 
-/* `@import` your project SASS partials here */
+/* Project-specific utilities
+   ========================================================================== */
+
+@import "utilities/_font-family";
+@import "utilities/_grid";
+@import "utilities/_leader";
+@import "utilities/_links";
+@import "utilities/_metadata";
+@import "utilities/_syntax";
+
+
+/* Global project styles
+   ========================================================================== */
+
+@import "_global";
+
+
+/* Project-specific components
+   ========================================================================== */
+
+@import "components/_heading";
+@import "components/_list";
+@import "components/_pullquote";
+@import "components/_table";
+
+
+/* All other project styles
+  ========================================================================== */
+
+@import "_editorial";

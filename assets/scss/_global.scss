@@ -1,0 +1,35 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  height: 100%;
+  @include fa-background-color(gray-16);
+}
+
+body,
+input,
+textarea,
+keygen,
+select,
+button {
+  @include ed-font-family(serif);
+  @include fa-font-size(default);
+  @include fa-line-height(default);
+  @include fa-text-color(default);
+}
+
+body {
+  background: none;
+  height: 100%;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+
+  @media only screen and (min-width: $breakpoint--sm) {
+    @include fa-font-size(large);
+  }
+}

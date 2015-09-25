@@ -1,0 +1,54 @@
+/* `font-family` values
+   ========================================================================== */
+
+$ed-font-family--1: "Georgia", "Times New Roman", serif;
+$ed-font-family--2: "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+
+/* `font-family` aliases
+   ========================================================================== */
+
+$ed-font-family--serif: $ed-font-family--1;
+$ed-font-family--sans:  $ed-font-family--2;
+
+
+/* Map
+   ========================================================================== */
+
+$ed-font-family-values: (
+  1:     $ed-font-family--1,
+  2:     $ed-font-family--2,
+  serif: $ed-font-family--serif,
+  sans:  $ed-font-family--sans
+);
+
+
+/* Mixin
+   ========================================================================== */
+
+/**
+ * Example usage:
+ * `@include ed-font-family(serif);`
+ * `@include ed-font-family(1);`
+ * `@include ed-font-family(sans, !important);`
+ */
+
+@mixin ed-font-family($value, $important: null) {
+  font-family: map-get($ed-font-family-values, $value) $important;
+}
+
+
+/* Utility classes
+   ========================================================================== */
+
+@if $u-classes-ed-font-family == true {
+
+  @each $ed-font-family, $ed-font-family-value in $ed-font-family-values {
+
+    .u-font-family--#{$ed-font-family} {
+      font-family: $ed-font-family-value !important;
+    }
+
+  }
+
+}

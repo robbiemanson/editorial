@@ -1,0 +1,83 @@
+/* Heading
+   ========================================================================== */
+
+.Heading,
+.Editorial h1,
+.Editorial h2,
+.Editorial h3,
+.Editorial h4,
+.Editorial h5,
+.Editorial h6  {
+  @include ed-font-family(sans);
+  @include fa-line-height(xx-tight);
+  @include fa-text-color(default);
+  @include fa-font-weight(bold);
+}
+
+.Heading--xx-large,
+.Editorial h1 {
+  margin: 0 0 0.5em 0;
+  @include fa-font-size(9);
+
+  @media only screen and (min-width: $breakpoint--x-sm) {
+    @include fa-font-size(11);
+  }
+}
+
+.Heading--x-large,
+.Editorial h2 {
+	 margin: 1.25em 0 0.5em 0;
+   @include fa-font-size(7);
+
+   @media only screen and (min-width: $breakpoint--x-sm) {
+     @include fa-font-size(9);
+   }
+   @media only screen and (min-width: $breakpoint--Editorial-large-text) {
+     @include fa-font-size(10);
+   }
+}
+
+.Heading--large,
+.Editorial h3 {
+  margin: 1.5em 0 0.25em 0;
+  @include fa-font-size(6);
+
+  @media only screen and (min-width: $breakpoint--x-sm) {
+    margin-bottom: 0.5em;
+    @include fa-font-size(7);
+  }
+  @media only screen and (min-width: $breakpoint--Editorial-large-text) {
+    @include fa-font-size(8);
+  }
+}
+
+.Heading--small,
+.Editorial h4 {
+  margin: 0.5em 0 0.5em 0;
+  @include fa-font-size(6);
+
+  @media only screen and (min-width: $breakpoint--x-sm) {
+    @include fa-font-size(7);
+  }
+}
+
+.Heading--x-small,
+.Editorial h5 {
+  margin: 0.5em 0 0.5em 0;
+  @include fa-font-size(5);
+}
+
+.Heading--xx-small,
+.Editorial h6 {
+  margin: 0.5em 0 0.5em 0;
+  @include fa-font-size(4);
+}
+
+.Heading--3 + .Heading--4,
+.Editorial h3 + .Editorial h4 {
+  @include fa-margin-top(6);
+}
+
+.Heading a {
+  text-decoration: none;
+}

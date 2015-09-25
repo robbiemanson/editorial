@@ -1,0 +1,60 @@
+/* Leader
+   ========================================================================== */
+
+@mixin Leader {
+  padding-bottom: 0.1em; /* Prevent descender clipping */
+  @include ed-font-family(sans);
+  @include fa-font-size(default);
+  @include fa-line-height(default);
+  @include fa-margin-bottom(default);
+  @include fa-text-color(default);
+  @include fa-font-weight(bold);
+
+  @media only screen and (min-width: $breakpoint--x-sm) {
+    @include fa-font-size(large);
+    @include fa-line-height(tight);
+  }
+  @media only screen and (min-width: $breakpoint--sm) {
+    @include fa-line-height(x-tight);
+    @include fa-font-size(x-large);
+  }
+}
+
+@mixin Leader--large {
+  @media only screen and (min-width: $breakpoint--sm-md) {
+    @include fa-font-size(9);
+    @include fa-line-height(5);
+  }
+  @media only screen and (min-width: $breakpoint--small-breakpoint) {
+    @include fa-font-size(10);
+    @include fa-line-height(5);
+  }
+}
+
+@mixin Leader--extraLarge {
+  @media only screen and (min-width: $breakpoint--sm-md) {
+    @include fa-font-size(9);
+    @include fa-line-height(5);
+  }
+  @media only screen and (min-width: $breakpoint--small-breakpoint) {
+    @include fa-font-size(11);
+    @include fa-line-height(4);
+  }
+}
+
+@mixin Leader--lite {
+  letter-spacing: -0.01em !important;
+  @include ed-font-family(sans, !important);
+  @include fa-text-color(x-light, !important);
+  @include fa-font-weight(default, !important);
+}
+
+.Leader--lite {
+  @include Leader--lite;
+}
+
+@media only screen and (min-width: $breakpoint--small-breakpoint) {
+  .Leader--pull {
+    margin-left: -4em;
+  }
+}

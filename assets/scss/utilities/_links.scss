@@ -1,0 +1,77 @@
+/* Links
+   ========================================================================== */
+
+$color--link: $color--fa-blue;
+$color--link--hover: darken($color--link, 15%);
+
+@mixin Link--colored($important: null) {
+  color: $color--link $important;
+}
+
+@mixin Link--colored--hover($important: null) {
+  color: $color--link--hover $important;
+}
+
+.Link,
+.Editorial a {
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 50%);
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 50%);
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 50%);
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 50%);
+	background-repeat: repeat-x;
+	background-size: 2px 2px;
+	background-position: 0 96%;
+  text-decoration: none;
+  @include fa-text-color(default);
+}
+
+@media not all, only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .Link,
+  .Editorial a {
+    background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 75%, rgba(0,0,0,0.5) 75%);
+    background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 75%, rgba(0,0,0,0.5) 75%);
+    background-image: -o-linear-gradient(top, rgba(0,0,0,0) 75%, rgba(0,0,0,0.5) 75%);
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 75%, rgba(0,0,0,0.5) 75%);
+    background-repeat: repeat-x;
+  }
+}
+
+.Heading-link {
+  background: none !important;
+}
+
+.Editorial a:active,
+.Editorial a:focus,
+.Editorial a:hover,
+.Link:active,
+.Link:focus,
+.Link:hover {
+  @include Link--colored;
+}
+
+.Link--border--none {
+  background: none !important;
+}
+
+.has-rightArrow:after {
+  content: "→";
+  display: inline-block;
+  margin-left: 0.25em;
+  @include fa-text-color(xx-light);
+}
+
+.has-rightArrow:active:after,
+.has-rightArrow:focus:after,
+.has-rightArrow:hover:after {
+  @include fa-text-color(x-light);
+}
+
+.Heading .Link {
+  background: none;
+}
+
+.Heading .Link:active,
+.Heading .Link:focus,
+.Heading .Link:hover {
+  @include Link--colored--hover;
+}

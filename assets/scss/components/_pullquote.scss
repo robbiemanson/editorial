@@ -1,0 +1,90 @@
+.Pullquote,
+.Editorial blockquote {
+  margin-left: 0.75em;
+  margin-right: 0;
+  margin-top: 0;
+  padding: 0;
+  position: relative;
+  @include fa-margin-bottom(large);
+  @include Leader;
+  @include Leader--extraLarge;
+
+  @media only screen and (min-width: $breakpoint--medium-breakpoint) {
+    margin-left: -2em !important;
+    margin-right: -2em !important;
+  }
+}
+
+.Pullquote--contained {
+  @media only screen and (min-width: $breakpoint--medium-breakpoint) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+.Pullquote--lite {
+  @include fa-font-weight(default);
+  @include fa-text-color(x-light, !important);
+}
+
+.Pullquote-quote,
+.Editorial blockquote p {
+  display: block;
+  margin: 0;
+}
+
+.Pullquote-quote:after,
+.Pullquote-quote:before,
+.Editorial blockquote p:after,
+.Editorial blockquote p:before {
+  display: inline-block;
+  -webkit-text-fill-color: $color--gray-9;
+  text-fill-color: $color--gray-9;
+  width: 1rem;
+  @include fa-text-color(x-light);
+}
+
+.Pullquote-quote:after,
+.Editorial blockquote p:after {
+  content: "”";
+}
+
+.Pullquote-quote:before,
+.Editorial blockquote p:before {
+  content: "“";
+  /* Value may need to be amended depending on typeface being used */
+  margin-left: -1.5rem;
+  text-align: right;
+}
+
+.Pullquote-cite,
+.Editorial cite {
+  font-style: normal;
+  letter-spacing: 0;
+  @include fa-margin-bottom(default);
+  @include fa-margin-top(default);
+  @include Metadata;
+
+  @media only screen and (min-width: $breakpoint--sm) {
+    @include fa-margin-left(large);
+  }
+}
+
+.Pullquote-cite:before,
+.Editorial cite:before {
+  content:"— ";
+}
+
+.Pullquote-cite .Link,
+.Editorial cite a {
+  @include fa-text-color(x-light);
+}
+
+.Pullquote-cite .Link:active,
+.Pullquote-cite .Link:focus,
+.Pullquote-cite .Link:hover,
+.Editorial cite a:active,
+.Editorial cite a:focus,
+.Editorial cite a:hover {
+  @include Link--colored;
+}
